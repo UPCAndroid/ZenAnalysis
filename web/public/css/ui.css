@@ -1,0 +1,120 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+@media screen {
+
+}
+a,a:hover{
+    text-decoration: none
+}
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: rgba(136,136,136,.25) 1px 0 4px;
+    background: #ffffff;
+    text-align: center
+}
+.box-shadow{
+    box-shadow: rgba(136,136,136,.25) 1px 0 4px;
+    box-shadow: rgba(136,136,136,.25) -1px 0 4px;
+    margin-bottom: 8px;
+    background: #fff;
+    padding:8px 0 8px 0;
+}
+.with-left-line{
+    display: block;
+    border-left: solid 1px #E2DCDC;
+}
+.with-left-blue-line{
+    display: block;
+    border-left: solid 1px #2D9CDB;
+}
+.btn-blue{
+    border:none;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    display: block;
+    background: #56ccf2;
+    border-radius: 5px;
+    height: 20px;
+    width: auto;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}
+button.btn-yellow{
+    border:none;
+    display: block;
+    background: #FDE18B;
+    border-radius: 5px;
+    height: 46px;
+    width: auto;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}
+button.btn-blue{
+    border:none;
+    display: block;
+    background: #56ccf2;
+    border-radius: 5px;
+    height: 46px;
+    width: auto;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.to-large,button.to-large{
+    width: 90%;
+    margin: 5px auto;
+}
+.text-input{
+    display: block;
+    border:solid 1px #56ccf2;
+    border-radius: 5px;
+    box-shadow: none;
+    margin: 10px auto 10px auto;
+    font-size: 20px;
+    height: 46px;
+}
+.text-input[placeholder]{
+    text-align: center;
+}
+.text-input:focus{
+    outline: none;
+}
+.to-center{
+    margin-left: auto;
+    margin-right: auto;
+}
+.deep-blue{
+    color: #2D9CDB;
+}
+.light-blue{
+    color: #56ccf2;
+}
+.circle{
+    border-radius: 50%;
+}
+.circle-mark{
+    transform: translateY(-1px);
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    padding: 3px;
+    border-radius: 50%;
+    background: #56ccf2;
+    font-size: 14px;
+    color: #ffffff;
+}
+.avatar{
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    border:solid 1px #56ccf2;
+}
+
