@@ -44,6 +44,7 @@ a,a:hover{
     color: #ffffff;
     font-size: 20px;
     text-align: center;
+    cursor: pointer;
 }
 button.btn-yellow{
     border:none;
