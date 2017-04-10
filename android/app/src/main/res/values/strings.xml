@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ZenAnalysis</string>
+    <string name="confirm_btn">确认</string>
+    <string name="choice_input_holder">请输入你的选择</string>
+</resources>
