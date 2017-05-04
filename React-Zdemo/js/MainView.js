@@ -26,7 +26,7 @@ export default class MainView extends Component{
 	_onPressButton(){
 		if(this.state.status == 0 || this.state.text){
 			if(!this.state.text){
-			Alert('输入不可为空');
+			Alert.alert('输入不可为空');
 			return;
 		}
 		this.options.push(this.state.text);
@@ -34,7 +34,7 @@ export default class MainView extends Component{
 
 		this.setState({text:''})
 	}else{
-		Alert.alert('推荐选择:',this.options[this.GetRet(this.options.length-1)]);
+		Alert.alert('推荐选择',this.options[this.GetRet(this.options.length-1)]);
 		this.setState({status:0});
 		this.options = [];
 	
