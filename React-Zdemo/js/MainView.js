@@ -1,8 +1,8 @@
 import React , {Component} from 'react';
-import {View,Text,StyleSheet,TextInput,TouchableHighlight,ListView,ScrollView
+import {View,Text,StyleSheet,TextInput,TouchableHighlight,ListView,Alert,ScrollView
 } from 'react-native';
-import Item from './Item'
-import NavBar from './NavBar'
+import Item from './Item';
+import NavBar from './NavBar';
 
 export default class MainView extends Component{
 	constructor(props) {
@@ -26,7 +26,7 @@ export default class MainView extends Component{
 	_onPressButton(){
 		if(this.state.status == 0 || this.state.text){
 			if(!this.state.text){
-			alert('you input can\'t be empty');
+			Alert('输入不可为空');
 			return;
 		}
 		this.options.push(this.state.text);
@@ -34,7 +34,7 @@ export default class MainView extends Component{
 
 		this.setState({text:''})
 	}else{
-		alert(this.options[this.GetRet(this.options.length-1)]);
+		Alert.alert('推荐选择:',this.options[this.GetRet(this.options.length-1)]);
 		this.setState({status:0});
 		this.options = [];
 	
@@ -59,7 +59,7 @@ export default class MainView extends Component{
         <View style={styles.buttonAndInput}>
         <TextInput
           style={styles.input}
-          placeholder="Type here to translate!"
+          placeholder="输入你的选择"
 		 underlineColorAndroid={'transparent'}
           onChangeText={(text) => this.setState({text})}
           onSubmitEditing={this._onPressButton}
