@@ -2,12 +2,13 @@ import React , {Component} from 'react';
 import {View,Text,StyleSheet,TextInput,TouchableHighlight,ListView,ScrollView
 } from 'react-native';
 import Item from './Item'
+import NavBar from './NavBar'
 
 export default class MainView extends Component{
 	constructor(props) {
 	  super(props);
 	const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-    this.options = ['Zenanlysis']
+    this.options = []
 
     this.state = {
       dataSource: ds.cloneWithRows(this.options),
@@ -35,7 +36,7 @@ export default class MainView extends Component{
 	}else{
 		alert(this.options[this.GetRet(this.options.length-1)]);
 		this.setState({status:0});
-		this.options = ['Zenanlysis'];
+		this.options = [];
 	
 	}
 	const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
@@ -47,9 +48,11 @@ export default class MainView extends Component{
       // Try setting `justifyContent` to `center`.
       // Try setting `flexDirection` to `row`.
       <View style={styles.container}>
+      	<NavBar />
         <ScrollView>
         <ListView
           dataSource={this.state.dataSource}
+          enableEmptySections={true}
           renderRow={(rowData) => <Item itemText={rowData}></Item>}
         />
         </ScrollView>
