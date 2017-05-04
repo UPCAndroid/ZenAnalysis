@@ -33,7 +33,7 @@ export default class MainView extends Component{
 
 		this.setState({text:''})
 	}else{
-		alert(this.options[this.GetRet(this.options.length)]);
+		alert(this.options[this.GetRet(this.options.length-1)]);
 		this.setState({status:0});
 		this.options = ['Zenanlysis'];
 	
@@ -57,6 +57,7 @@ export default class MainView extends Component{
         <TextInput
           style={styles.input}
           placeholder="Type here to translate!"
+		 underlineColorAndroid={'transparent'}
           onChangeText={(text) => this.setState({text})}
           onSubmitEditing={this._onPressButton}
           value={this.state.text}
@@ -92,7 +93,7 @@ const styles = StyleSheet.create({
 		borderWidth:1,
 		margin:5,
 		paddingLeft:10,
-		borderRadius:5
+		borderRadius:5,
 	},
 	button:{
 		padding:10,

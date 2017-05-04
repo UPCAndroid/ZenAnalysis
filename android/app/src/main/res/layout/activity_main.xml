@@ -21,6 +21,11 @@
         android:background="@drawable/bg_circle_with_stroke_dash"
         android:id="@+id/textView2"
         android:elevation="8dp"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl"
+        />
 
     <Button
         android:id="@+id/confirmBtn"
